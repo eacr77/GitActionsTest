@@ -3,9 +3,12 @@ on:
   workflow_dispatch
 jobs:
   mi-job:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
       - name: mi action con Actions
         uses: actions/hello-world-javascript-action@main
         with:
           who-to-greet: 'Mi Primera Action Edrey'
+          
+      - name: mi action con CLI
+        run: echo "Hello World"
